@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Todos - Ant</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4">
+            <div class="row">
+                <h1 class="text-primary text-center">Todos</h1>
+                <div class="clearfix"></div>
+            </div>
+            <div class="portlet">
+                <div class="panel-collapse collapse in">
+                    <div class="portlet-body"> 
+                        <ul id="todo-nav" class="nav nav-tabs"> 
+                            <li class="active"> 
+                                <a href="#todo" data-toggle="tab" aria-expanded="true">待办</a> 
+                            </li> 
+                            <li class=""> 
+                                <a href="#done" data-toggle="tab" aria-expanded="false">已归档</a> 
+                            </li> 
+                        </ul> 
+                        <div class="tab-content"> 
+                            <div class="tab-pane active" id="todo"> 
+                                <div class="todoapp">
+                                    <div class="row">
+                                        <div class="col-sm-1">
+                                            <div class="checkbox">
+                                                <label class="cr-styled"><input type="checkbox" class="todo-done-all"></label>
+                                            </div> 
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <h4 id="todo-message">待完成 <span id="todo-remaining"></span> / <span id="todo-total"></span></h4>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <a href="#" class="pull-right btn btn-primary btn-sm" id="btn-clear">清空</a>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <a href="#" class="pull-right btn btn-primary btn-sm" id="btn-delete">删除</a>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <a href="#" class="pull-right btn btn-primary btn-sm" id="btn-archive">归档</a>
+                                        </div>
+                                    </div>
+                                    <ul class="list-group no-margn nicescroll todo-list" id="todo-list"></ul>
+                                    <form name="todo-form" id="todo-form" role="form" class="m-t-20">
+                                        <div class="row">
+                                            <div class="col-sm-9 todo-inputbar">
+                                                <input type="text" id="todo-input-text" name="todo-input-text" class="form-control" placeholder="请输入待办事项....">
+                                            </div>
+                                            <div class="col-sm-3 todo-send">
+                                                <button class="btn-primary btn-block btn" type="button" id="btn-submit">添加</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div> 
+                            </div> 
+                            <div class="tab-pane" id="done"> 
+                                <div class="todoapp">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <h4 id="todo-message">已归档 <span id="done-total"></span></h4> 
+                                        </div>
+                                    </div>
+                                    <ul class="list-group no-margn nicescroll todo-list" id="done-list"></ul>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <footer class="footer text-center">
+               todos-jquery  ©2019 Created by HY.
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+
+    <script src="js/todo.js"></script>
+
+</body>
+</html>
